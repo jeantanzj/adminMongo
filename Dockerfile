@@ -1,4 +1,6 @@
 FROM node:alpine
+EXPOSE 8081
+ENV PORT=8081
 ENV HOME=/app/user
 ENV ROOT_UID=0
 ENV ROOT_GID=0
@@ -20,3 +22,4 @@ RUN npm install --production
 
 COPY . .
 CMD node app.js
+
